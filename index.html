@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DailyLaughs 😂 | Funny Every Day</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: white;
+}
+header {
+  background: #ffdf00;
+  color: #111;
+  text-align: center;
+  padding: 28px 15px;
+}
+header h1 { margin: 0; font-size: 38px; }
+header p { margin-bottom: 0; }
+nav {
+  text-align: center;
+  padding: 14px;
+  background: #222;
+}
+nav a {
+  color: #ffdf00;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+main {
+  max-width: 700px;
+  margin: auto;
+  padding: 20px;
+}
+h2 { text-align: center; }
+.quote {
+  background: #242424;
+  border: 2px solid #ffdf00;
+  border-radius: 16px;
+  padding: 22px;
+  margin: 18px 0;
+  text-align: center;
+  font-size: 19px;
+  line-height: 1.5;
+}
+.emoji { font-size: 32px; }
+button {
+  background: #ffdf00;
+  color: #111;
+  border: none;
+  border-radius: 9px;
+  padding: 12px 18px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+}
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #bbb;
+  background: #222;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>😂 DailyLaughs</h1>
+  <p>Your daily dose of nonsense!</p>
+</header>
+
+<nav>
+  <a href="#quotes">Funny Quotes</a>
+  <a href="#about">About Us</a>
+</nav>
+
+<main>
+  <h2 id="quotes">🤣 Today's Laughs</h2>
+
+  <div class="quote">
+    <div class="emoji">💸</div>
+    <p>"My bank account is like an
+    onion. I open it and start crying."</p>
+  </div>
+
+  <div class="quote">
+    <div class="emoji">😴</div>
+    <p>"I need six months of holiday,
+    twice a year."</p>
+  </div>
+
+  <div class="quote">
+    <div class="emoji">📱</div>
+    <p>"I followed my dreams.
+    They led me back to bed."</p>
+  </div>
+
+  <div class="quote">
+    <div class="emoji">😂</div>
+    <p id="randomQuote">Click below for another laugh!</p>
+    <button onclick="newQuote()">Make Me Laugh</button>
+  </div>
+
+  <section id="about">
+    <h2>About DailyLaughs</h2>
+    <p style="text-align:center">
+      Original funny quotes, relatable jokes and
+      daily laughs to brighten your day!
+    </p>
+  </section>
+</main>
+
+<footer>
+  © 2026 DailyLaughs | Stay Funny 😂
+</footer>
+
+<script>
+const jokes = [
+  "I'm not lazy. I'm on energy-saving mode.",
+  "My brain has too many tabs open.",
+  "I'm great at multitasking. I can waste time, be unproductive and procrastinate all at once.",
+  "I put my phone down and immediately forgot who I was.",
+  "Being an adult is mostly saying 'after this week, things will calm down.'",
+  "My wallet and I are no longer on speaking terms.",
+  "I need a GPS to find my motivation.",
+  "I came, I saw, I forgot what I was doing."
+];
+
+function newQuote() {
+  const joke = jokes[Math.floor(Math.random() * jokes.length)];
+  document.getElementById("randomQuote").textContent = '"' + joke + '"';
+}
+</script>
+
+</body>
+</html>
